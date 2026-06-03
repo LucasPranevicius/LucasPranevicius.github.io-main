@@ -1,0 +1,345 @@
+/* Configurações Gerais e Cores */
+:root {
+    --primary-color: #007acc; /* Azul principal */
+    --secondary-color: #1e1e24; /* Escuro para o menu/cards */
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --bg-alt: #f4f6f9; /* Fundo alternando cinza claro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Efeito de rolagem suave ao clicar no menu */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+/* Menu de Navegação */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Seção Hero (Apresentação Inicial) */
+.hero {
+    height: 100vh;
+    background: linear-gradient(180deg, #0b1d3a 0%, #203a61 60%, #e1e7ed 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Desconto do menu fixo */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    color: #4da6ff;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #005999;
+}
+
+/* Seção Sobre e Tags de Habilidades */
+#sobre h3 {
+    font-size: 1.4rem;   /* Deixa o título um pouco maior */
+    margin-top: 35px;    /* CRIA O ESPAÇO QUE VOCÊ QUERIA AQUI */
+    margin-bottom: 15px; /* Espaço antes das tags de habilidades */
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background-color: #e0e0e0;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Grid de Projetos (Cards) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px; /* Espaço entre as colunas e linhas */
+    margin-top: 30px;
+}
+
+/* Garante que se o navegador empilhar os cards, eles mantenham distância */
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-color);
+    transition: transform 0.3s;
+    margin-bottom: 25px; /* Força o espaço vertical de qualquer jeito */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* Mini tags dentro dos cards de projetos */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag-mini {
+    background-color: #eef2f7;
+    color: #4a5568;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Alinha verticalmente se houver altura */
+    width: 100%;             /* Garante que a div ocupe a largura total da página */
+}
+
+/* NOVO: Estilização do Álbum de Figurinhas Interativo (2x2) */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Força a estrutura de 2 colunas */
+    gap: 20px;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.album-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    aspect-ratio: 16 / 9; /* Mantém uma proporção retangular padrão de imagem aeronáutica */
+    background-color: #e2e8f0; /* Fundo cinza enquanto a imagem carrega */
+}
+
+.album-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz as fotos cobrirem o espaço sem distorcer */
+    transition: transform 0.5s ease;
+}
+
+/* Camada escura que esconde o nome e só aparece no Hover */
+.album-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 29, 58, 0.85); /* Azul escuro aeronáutico translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Escondido por padrão */
+    transition: opacity 0.3s ease;
+    padding: 15px;
+}
+
+.album-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito Hover (Passar o Mouse) */
+.album-card:hover .album-overlay {
+    opacity: 1; /* Revela a camada escura e o texto */
+}
+
+.album-card:hover .album-title {
+    transform: translateY(0); /* Leve animação subindo o texto */
+}
+
+.album-card:hover .album-img {
+    transform: scale(1.05); /* Zoom sutil na imagem de fundo */
+}
+
+/* Responsividade: Vira coluna única apenas em telas bem pequenas de celular */
+@media (max-width: 576px) {
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsividade Básica para Celular (Menu/Hero) */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}

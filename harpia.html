@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harpia Aerodesign | Detalhes do Projeto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a página de detalhes do projeto */
+        .project-details {
+            padding-top: 120px; /* Evita que o menu fixo cubra o título */
+            padding-bottom: 60px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .meta-box {
+            background-color: var(--bg-alt);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .meta-box p {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .meta-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        .project-content p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Espaço reservado para quando você colocar fotos de gráficos/simulações */
+        .project-image-placeholder {
+            background-color: #e2e8f0;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            color: #64748b;
+            font-weight: 500;
+            margin: 30px 0;
+        }
+
+        .project-image-placeholder i {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Lucas Pranevicius</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container project-details">
+        
+        <a href="index.html#projetos" class="back-link">← Voltar para os Projetos</a>
+        
+        <div class="project-header">
+            <h1>Harpia Aerodesign</h1>
+        </div>
+
+        <div class="meta-box">
+            <p><strong>✈️ Contexto:</strong> Competição SAE Brasil Aerodesign & SAE International</p>
+            <p><strong>🛠️ Cargo/Atuação:</strong> Coordenador da área técnica de Cargas e Aeroelasticidade</p>
+            <p><strong>💻 Principais Ferramentas:</strong> Siemens Femap, Nastran, MATLAB, Python</p>
+        </div>
+
+        <div class="project-content">
+            <h2>1. Escopo e Desafio Técnico</h2>
+            <p>
+                Na competição Aerodesign, o principal desafio é projetar uma aeronave cargueira radio-controlada com a maior eficiência estrutural possível (carregar o máximo de peso com o menor peso estrutural próprio). Dentro da equipe, a coordenação de Cargas e Aeroelasticidade atua na interface crítica entre a aerodinâmica e o dimensionamento estrutural.
+            </p>
+            <p>
+                A responsabilidade da área envolve mapear todas as forças que atuam no avião durante as fases críticas de voo (decolagem, curvas de alta carga g, rajadas de vento e pouso) e garantir que a estrutura não falhe catastroficamente devido a fenômenos estáticos e dinâmicos.
+            </p>
+
+            <h2>2. Metodologia de Análise</h2>
+            <p>
+                O trabalho foi estruturado com base em rotinas automatizadas e simulações numéricas para prever o comportamento da aeronave antes da fabricação do protótipo físico:
+            </p>
+            <p>
+                <strong>Construção do Diagrama V-n:</strong> Utilizando scripts em Python e MATLAB, foram mapeados os limites operacionais da aeronave cruzando velocidade de voo e fator de carga (g), seguindo os critérios de segurança baseados no regulamento RBAC 23.
+            </p>
+            <p>
+                <strong>Análise de Aeroelasticidade (Flutter):</strong> Através do acoplamento entre as forças aerodinâmicas e a rigidez estrutural no Siemens Femap/Nastran, realizamos análises de modos de vibração e extração das velocidades críticas de divergência e <em>flutter</em>, guaranteeing que o avião opere em uma zona aeroelasticamente estável.
+            </p>
+
+            <figure style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 30px 0;">
+                <div style="display: flex; flex-direction: row; justify-content: center; gap: 20px; width: 100%; max-width: 1000px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                        <img src="imagens/Vn_inicial(2,3).png" alt="Diagrama V-n da Harpia Aerodesign" style="width: 100%; max-width: 450px; height: auto; border-radius: 4px;">
+                        <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #64748b; font-style: italic; text-align: center;">
+                            Diagrama V-n projeto 2025 "Tuiuiú"
+                        </figcaption>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                        <img src="imagens/VGF preliminar (1).jpg" alt="Diagrama VGF da Harpia Aerodesign" style="width: 100%; max-width: 450px; height: auto; border-radius: 4px;">
+                        <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #64748b; font-style: italic; text-align: center;">
+                            Diagrama VGF projeto 2025 "Tuiuiú"
+                        </figcaption>
+                    </div>
+                </div>
+            </figure>
+
+            <h2>3. Resultados Alcançados</h2>
+            <p>
+                A automação do cálculo de distribuição de sustentação na asa permitiu que a equipe de estruturas refinasse as longarinas e nervuras com coeficientes de segurança otimizados, resultando em uma redução significativa no peso vazio da aeronave. Na pista, esse rigor técnico se traduziu em uma trajetória histórica de crescimento e conquistas consecutivas para a equipe:
+            </p>
+            <p>
+                <strong>🏆 2023 (Nacional):</strong> Consolidação do trabalho de engenharia com a conquista do <strong>4º lugar geral</strong> na competição SAE Brasil Aerodesign, garantindo o primeiro troféu da história da equipe.
+            </p>
+            <p>
+                <strong>✈️ 2024 (Nacional & Internacional):</strong> Bicampeonato no pódio nacional com mais um <strong>4º lugar geral</strong>, carimbando a vaga inédita para representar o Brasil no cenário internacional. Na competição da <em>SAE International</em>, realizada na <strong>Califórnia (EUA)</strong>, a equipe disputou com as maiores universidades do mundo e conquistou uma histórica <strong>7ª posição mundial</strong>.
+            </p>
+
+            <div class="album-grid">
+                <div class="album-card">
+                    <img src="imagens\cadu.jpeg" alt="Projeto Cadú Maverick (2023)" class="album-img">
+                    <div class="album-overlay">
+                        <span class="album-title">Projeto Cadú Maverick (2023)</span>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <img src="imagens\zeca.jpeg" alt="Projeto Zé Carioca (2024)" class="album-img">
+                    <div class="album-overlay">
+                        <span class="album-title">Projeto Zé Carioca (2024)</span>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <img src="imagens\senna.jpeg" alt="Projeto Senna (2025 - Internacional)" class="album-img">
+                    <div class="album-overlay">
+                        <span class="album-title">Projeto Senna (2025 - Internacional)</span>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <img src="imagens\tuiuiu.jpeg" alt="Projeto Tuiuiú (2025)" class="album-img">
+                    <div class="album-overlay">
+                        <span class="album-title">Projeto Tuiuiú (2025)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 style="margin-top: 40px;">Embasamento Normativo</h2>
+        <div class="normas-container" style="margin-top: 15px;">
+            <div class="norma-item" style="margin-bottom: 15px; padding-left: 15px; border-left: 3px solid var(--primary-color);">
+                <strong>FAR 23 / CS-23 (EASA):</strong> Requisitos gerais de aeronavegabilidade para definição dos limites operacionais e fator de carga máximo estrutural.
+            </div>
+
+            <div class="norma-item" style="margin-bottom: 15px; padding-left: 15px; border-left: 3px solid var(--primary-color);">
+                <strong>FAR 25 / AC 25.629-1B (FAA):</strong> Circular consultiva para fundamentação das margens de segurança aeroelástica.
+            </div>
+
+            <div class="norma-item" style="margin-bottom: 15px; padding-left: 15px; border-left: 3px solid var(--primary-color);">
+                <strong>MIL-A-8870C (DoD USA):</strong> Norma militar para balizamento de eficiência de controle, reversão de comando e prevenção de instabilidades aeroelásticas.
+            </div>
+
+            <div class="norma-item" style="margin-bottom: 15px; padding-left: 15px; border-left: 3px solid var(--primary-color);">
+                <strong>AGARD-R-822:</strong> Referência técnica para tolerâncias e metodologia de ensaios de vibração em solo (GVT) para validação do modelo numérico.
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2026 Lucas Pranevicius. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
